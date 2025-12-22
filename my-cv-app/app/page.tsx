@@ -563,7 +563,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/IUC02_NextJS"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -571,7 +571,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://iuc-02-demonstrator.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -629,7 +629,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/LLM_metadata_django_app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -637,7 +637,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://llm-metadata-django-app.onrender.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -692,7 +692,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/AgentSem"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -700,7 +700,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://agent-rdf-shacl-creator-0f2d13e6fb10.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -749,7 +749,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/Plant-Disease-Classification-Project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -757,7 +757,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://plant-disease-classification-mlops.streamlit.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -808,7 +808,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/Annotation_NER_LLM"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -816,7 +816,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://annotation-by-llm.streamlit.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -868,7 +868,7 @@ export default function CVPortfolio() {
               </div>
               <div className="flex gap-3 mb-3">
                 <a
-                  href="#"
+                  href="https://github.com/teman67/E-Learning-Booking-Courses-Project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
@@ -876,7 +876,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="#"
+                  href="https://e-learning-booking-courses-project.onrender.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
