@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function CVPortfolio() {
   return (
@@ -14,13 +15,29 @@ export default function CVPortfolio() {
       <header className="relative z-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-purple-200 dark:border-purple-900 shadow-lg">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="space-y-2">
-              <h1 className="text-4xl lg:text-5xl font-bold gradient-text animate-fadeInUp">
-                Amirhossein Bayani
-              </h1>
-              <p className="text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 font-semibold animate-fadeInUp">
-                Full Stack Software Developer
-              </p>
+            {/* Profile Image and Info */}
+            <div className="flex items-center gap-6">
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative">
+                  <Image
+                    src="/profile.png"
+                    alt="Amirhossein Bayani"
+                    width={120}
+                    height={120}
+                    className="rounded-full border-4 border-white dark:border-slate-800 shadow-xl object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <h1 className="text-4xl lg:text-5xl font-bold gradient-text animate-fadeInUp">
+                  Amirhossein Bayani
+                </h1>
+                <p className="text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 font-semibold animate-fadeInUp">
+                  Full Stack Software Developer
+                </p>
+              </div>
             </div>
 
             <div className="flex gap-3 animate-fadeInUp">
