@@ -1,6 +1,10 @@
+"use client";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import { translations } from "./translations";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,12 +16,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Amirhossein Bayani - Full Stack Developer Portfolio",
-  description:
-    "Full-Stack Software Developer specializing in AI-enabled applications, Python/Django, Next.js, and semantic web technologies",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,10 +23,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Amirhossein Bayani - Full Stack Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Full-Stack Software Developer specializing in AI-enabled applications, Python/Django, Next.js, and semantic web technologies"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider translations={translations}>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -1,7 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { useLanguage } from "./contexts/LanguageContext";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 export default function CVPortfolio() {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Animated Background Pattern */}
@@ -32,31 +37,34 @@ export default function CVPortfolio() {
               </div>
               <div className="space-y-2">
                 <h1 className="text-4xl lg:text-5xl font-bold gradient-text animate-fadeInUp">
-                  Amirhossein Bayani
+                  {t("name")}
                 </h1>
                 <p className="text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 font-semibold animate-fadeInUp">
-                  Full Stack Software Developer
+                  {t("title")}
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-3 animate-fadeInUp">
-              <a
-                href="https://www.linkedin.com/in/amirhosseinbayani/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                <span className="relative z-10">LinkedIn</span>
-              </a>
-              <a
-                href="https://github.com/teman67"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              >
-                <span className="relative z-10">GitHub</span>
-              </a>
+            <div className="flex flex-col gap-3 animate-fadeInUp">
+              <LanguageSwitcher />
+              <div className="flex gap-3">
+                <a
+                  href="https://www.linkedin.com/in/amirhosseinbayani/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <span className="relative z-10">LinkedIn</span>
+                </a>
+                <a
+                  href="https://github.com/teman67"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-900 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <span className="relative z-10">GitHub</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -81,7 +89,7 @@ export default function CVPortfolio() {
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span>79111 Freiburg, BW, Germany</span>
+              <span>{t("location")}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <svg
@@ -97,7 +105,7 @@ export default function CVPortfolio() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>+49 1573 969 3972</span>
+              <span>{t("phone")}</span>
             </div>
             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <svg
@@ -113,14 +121,13 @@ export default function CVPortfolio() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>amirhossein.bayani@gmail.com</span>
+              <span>{t("email")}</span>
             </div>
           </div>
 
           <div className="mt-4 px-4 py-3 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/30 dark:to-blue-900/30 rounded-lg border border-purple-300 dark:border-purple-700">
             <p className="text-sm font-semibold text-gray-800 dark:text-gray-200">
-              🇩🇪 Permanent Resident — Germany (Unrestricted Work Permit - Die
-              Niederlassungserlaubnis)
+              {t("workPermit")}
             </p>
           </div>
         </div>
@@ -147,17 +154,11 @@ export default function CVPortfolio() {
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Professional Summary
+                {t("summaryTitle")}
               </h2>
             </div>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              Full-Stack Software Developer (3+ years) specializing in
-              AI-enabled applications. Experienced with Python/Django/FastAPI,
-              Next.js, PostgreSQL, Docker, and cloud deployment. Developed RAG
-              systems, semantic-web tools, and NLP pipelines for real-world
-              applications. Experienced in building APIs, end-to-end data
-              workflows, and web platforms. Open to onsite, hybrid, or remote
-              opportunities.
+              {t("summaryText")}
             </p>
           </div>
         </section>
@@ -182,14 +183,14 @@ export default function CVPortfolio() {
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Technical Skills
+                {t("skillsTitle")}
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="space-y-3">
                 <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 p-4 rounded-xl border border-purple-200 dark:border-purple-800">
                   <span className="font-semibold text-purple-700 dark:text-purple-300 block mb-2">
-                    Languages & Frameworks
+                    {t("skillsLanguagesFrameworks")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {[
@@ -213,7 +214,7 @@ export default function CVPortfolio() {
 
                 <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 p-4 rounded-xl border border-blue-200 dark:border-blue-800">
                   <span className="font-semibold text-blue-700 dark:text-blue-300 block mb-2">
-                    Databases
+                    {t("skillsDatabases")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["PostgreSQL", "MySQL", "Supabase"].map((skill) => (
@@ -229,7 +230,7 @@ export default function CVPortfolio() {
 
                 <div className="bg-gradient-to-r from-pink-50 to-rose-50 dark:from-pink-900/30 dark:to-rose-900/30 p-4 rounded-xl border border-pink-200 dark:border-pink-800">
                   <span className="font-semibold text-pink-700 dark:text-pink-300 block mb-2">
-                    Tools & DevOps
+                    {t("skillsToolsDevOps")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["Git", "Docker", "Heroku", "FastAPI", "VS Code"].map(
@@ -249,7 +250,7 @@ export default function CVPortfolio() {
               <div className="space-y-3">
                 <div className="bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 p-4 rounded-xl border border-emerald-200 dark:border-emerald-800">
                   <span className="font-semibold text-emerald-700 dark:text-emerald-300 block mb-2">
-                    AI/ML
+                    {t("skillsAIML")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {[
@@ -273,7 +274,7 @@ export default function CVPortfolio() {
 
                 <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 p-4 rounded-xl border border-amber-200 dark:border-amber-800">
                   <span className="font-semibold text-amber-700 dark:text-amber-300 block mb-2">
-                    AI-assisted Development
+                    {t("skillsAIAssisted")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["GitHub Copilot", "Cursor AI"].map((skill) => (
@@ -289,7 +290,7 @@ export default function CVPortfolio() {
 
                 <div className="bg-gradient-to-r from-indigo-50 to-violet-50 dark:from-indigo-900/30 dark:to-violet-900/30 p-4 rounded-xl border border-indigo-200 dark:border-indigo-800">
                   <span className="font-semibold text-indigo-700 dark:text-indigo-300 block mb-2">
-                    Languages
+                    {t("skillsLanguages")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["English (C1)", "German (B1)", "Persian (Native)"].map(
@@ -328,7 +329,7 @@ export default function CVPortfolio() {
               </svg>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Experience
+              {t("experienceTitle")}
             </h2>
           </div>
 
@@ -337,45 +338,39 @@ export default function CVPortfolio() {
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Semantic Web Developer
+                    {t("job1Title")}
                   </h3>
                   <p className="text-purple-600 dark:text-purple-400 font-semibold">
-                    University of Freiburg, Freiburg, Germany
+                    {t("job1Company")}
                   </p>
                 </div>
                 <span className="px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900/50 dark:to-blue-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold whitespace-nowrap">
-                  2024/06 - Current
+                  {t("job1Date")}
                 </span>
               </div>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex gap-3">
                   <span className="text-purple-500 mt-1">✦</span>
                   <span>
-                    Developed 3 LLM-powered web applications for automatic
-                    semantic metadata generation using Django, PostgreSQL, and
-                    Supabase, serving 50+ researchers
+                    {t("job1Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-purple-500 mt-1">✦</span>
                   <span>
-                    Created and maintained ontologies in materials science,
-                    improving data interoperability across 3+ research projects
+                    {t("job1Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-purple-500 mt-1">✦</span>
                   <span>
-                    Automated research data workflows using electronic lab
-                    notebooks (openBIS), reducing manual data entry by 60%
+                    {t("job1Desc3")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-purple-500 mt-1">✦</span>
                   <span>
-                    Collaborated with interdisciplinary teams to implement
-                    semantic web standards (RDF, OWL, SHACL) for knowledge graph
-                    construction
+                    {t("job1Desc4")}
                   </span>
                 </li>
               </ul>
@@ -385,44 +380,39 @@ export default function CVPortfolio() {
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Scientific Researcher
+                    {t("job2Title")}
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400 font-semibold">
-                    Fraunhofer IWM, Freiburg, Germany
+                    {t("job2Company")}
                   </p>
                 </div>
                 <span className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/50 dark:to-cyan-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold whitespace-nowrap">
-                  2021/07 – 2023/07
+                  {t("job2Date")}
                 </span>
               </div>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex gap-3">
                   <span className="text-blue-500 mt-1">✦</span>
                   <span>
-                    Conducted large-scale computational simulations on material
-                    systems
+                    {t("job2Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500 mt-1">✦</span>
                   <span>
-                    Developed AI-driven materials modeling algorithms using
-                    TensorFlow and Scikit-Learn, improving prediction accuracy
-                    by 25%
+                    {t("job2Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500 mt-1">✦</span>
                   <span>
-                    Led interdisciplinary collaboration with 15+ researchers
-                    across 3 European institutions
+                    {t("job2Desc3")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-blue-500 mt-1">✦</span>
                   <span>
-                    Published 2 peer-reviewed papers and supervised 3 junior
-                    researchers and master's students
+                    {t("job2Desc4")}
                   </span>
                 </li>
               </ul>
@@ -432,43 +422,39 @@ export default function CVPortfolio() {
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-3 mb-4">
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    Postdoctoral Researcher
+                    {t("job3Title")}
                   </h3>
                   <p className="text-emerald-600 dark:text-emerald-400 font-semibold">
-                    Uppsala University, Uppsala, Sweden
+                    {t("job3Company")}
                   </p>
                 </div>
                 <span className="px-4 py-2 bg-gradient-to-r from-emerald-100 to-green-100 dark:from-emerald-900/50 dark:to-green-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-semibold whitespace-nowrap">
-                  2018/10 – 2020/10
+                  {t("job3Date")}
                 </span>
               </div>
               <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li className="flex gap-3">
                   <span className="text-emerald-500 mt-1">✦</span>
                   <span>
-                    Led 3 independent research projects integrating
-                    computational models with experimental validation
+                    {t("job3Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-emerald-500 mt-1">✦</span>
                   <span>
-                    Developed custom Python scripts for data analysis and
-                    visualization, processing multi-terabyte datasets
+                    {t("job3Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-emerald-500 mt-1">✦</span>
                   <span>
-                    Delivered 3 conference presentations and 3 publications in
-                    high-impact journals
+                    {t("job3Desc3")}
                   </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-emerald-500 mt-1">✦</span>
                   <span>
-                    Established international collaborations resulting in 2
-                    joint research proposals
+                    {t("job3Desc4")}
                   </span>
                 </li>
               </ul>
@@ -498,47 +484,47 @@ export default function CVPortfolio() {
                 </svg>
               </div>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Education
+                {t("educationTitle")}
               </h2>
             </div>
             <div className="space-y-4">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 p-4 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 rounded-lg">
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">
-                    Diploma: Full Stack Software Development
+                    {t("edu1Title")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Code Institute – Dublin, Ireland
+                    {t("edu1School")}
                   </p>
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm font-medium whitespace-nowrap">
-                  2023/08 – 2024/03
+                  {t("edu1Date")}
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-lg">
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">
-                    Ph.D.: Nanotechnology Engineering
+                    {t("edu2Title")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Kashan University - Kashan, Iran
+                    {t("edu2School")}
                   </p>
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm font-medium whitespace-nowrap">
-                  2013/09 – 2017/09
+                  {t("edu2Date")}
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 p-4 bg-gradient-to-r from-emerald-50 to-green-50 dark:from-emerald-900/30 dark:to-green-900/30 rounded-lg">
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">
-                    MSc & BSc: Physics
+                    {t("edu3Title")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Ferdowsi University - Mashhad, Iran
+                    {t("edu3School")}
                   </p>
                 </div>
                 <span className="text-gray-600 dark:text-gray-400 text-sm font-medium whitespace-nowrap">
-                  2006/09 – 2013/07
+                  {t("edu3Date")}
                 </span>
               </div>
             </div>
@@ -564,7 +550,7 @@ export default function CVPortfolio() {
               </svg>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Selected Projects
+              {t("projectsTitle")}
             </h2>
           </div>
 
@@ -572,7 +558,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-purple-200 dark:border-purple-900 hover:border-purple-400 dark:hover:border-purple-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  NextJS + FastAPI Full-stack RDF/SHACL Application
+                  {t("project1Title")}
                 </h3>
                 <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2025
@@ -617,19 +603,17 @@ export default function CVPortfolio() {
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
                   <span>
-                    Workflow for evaluating experimental/modeling methods and
-                    uncertainties
+                    {t("project1Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
-                  <span>Deployed on Heroku and Vercel with CI/CD pipeline</span>
+                  <span>{t("project1Desc2")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
                   <span>
-                    Implements community-driven processes for reference material
-                    data sets
+                    {t("project1Desc3")}
                   </span>
                 </li>
               </ul>
@@ -638,7 +622,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-200 dark:border-blue-900 hover:border-blue-400 dark:hover:border-blue-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  Metadata Schema Generator with LLMs
+                  {t("project2Title")}
                 </h3>
                 <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2025
@@ -681,18 +665,18 @@ export default function CVPortfolio() {
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex gap-2">
                   <span className="text-blue-500">•</span>
-                  <span>Auto-generates research metadata using LLMs</span>
+                  <span>{t("project2Desc1")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-500">•</span>
                   <span>
-                    User authentication, file upload, and real-time processing
+                    {t("project2Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-blue-500">•</span>
                   <span>
-                    Reduced metadata creation time from 2 hours to 10 minutes
+                    {t("project2Desc3")}
                   </span>
                 </li>
               </ul>
@@ -701,7 +685,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-emerald-200 dark:border-emerald-900 hover:border-emerald-400 dark:hover:border-emerald-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  RDF/SHACL Generator with AI Agents
+                  {t("project3Title")}
                 </h3>
                 <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2023
@@ -739,18 +723,18 @@ export default function CVPortfolio() {
                 <li className="flex gap-2">
                   <span className="text-emerald-500">•</span>
                   <span>
-                    Converts material test data into structured knowledge graphs
+                    {t("project3Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-emerald-500">•</span>
                   <span>
-                    SHACL validation ensuring 95% data quality compliance
+                    {t("project3Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-emerald-500">•</span>
-                  <span>Integrated with existing research infrastructure</span>
+                  <span>{t("project3Desc3")}</span>
                 </li>
               </ul>
             </div>
@@ -758,7 +742,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-amber-200 dark:border-amber-900 hover:border-amber-400 dark:hover:border-amber-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  ML Plant Disease Classification
+                  {t("project4Title")}
                 </h3>
                 <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2025
@@ -798,18 +782,18 @@ export default function CVPortfolio() {
                 <li className="flex gap-2">
                   <span className="text-amber-500">•</span>
                   <span>
-                    CNN model achieving 94% accuracy on plant disease detection
+                    {t("project4Desc1")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-amber-500">•</span>
                   <span>
-                    Interactive web interface with real-time classification
+                    {t("project4Desc2")}
                   </span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-amber-500">•</span>
-                  <span>Model optimization reducing inference time by 40%</span>
+                  <span>{t("project4Desc3")}</span>
                 </li>
               </ul>
             </div>
@@ -817,7 +801,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-pink-200 dark:border-pink-900 hover:border-pink-400 dark:hover:border-pink-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  LLM-Powered Annotation Application
+                  {t("project5Title")}
                 </h3>
                 <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2023
@@ -861,15 +845,15 @@ export default function CVPortfolio() {
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex gap-2">
                   <span className="text-pink-500">•</span>
-                  <span>Automatically annotates scientific text with LLMs</span>
+                  <span>{t("project5Desc1")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-pink-500">•</span>
-                  <span>Chunk-based processing with multi-format export</span>
+                  <span>{t("project5Desc2")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-pink-500">•</span>
-                  <span>Improved annotation efficiency by 70%</span>
+                  <span>{t("project5Desc3")}</span>
                 </li>
               </ul>
             </div>
@@ -877,7 +861,7 @@ export default function CVPortfolio() {
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-indigo-200 dark:border-indigo-900 hover:border-indigo-400 dark:hover:border-indigo-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  E-Learning Booking Platform
+                  {t("project6Title")}
                 </h3>
                 <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-semibold whitespace-nowrap">
                   2024
@@ -916,15 +900,15 @@ export default function CVPortfolio() {
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex gap-2">
                   <span className="text-indigo-500">•</span>
-                  <span>Full CRUD operations for courses and bookings</span>
+                  <span>{t("project6Desc1")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-indigo-500">•</span>
-                  <span>Email notifications and administrative dashboard</span>
+                  <span>{t("project6Desc2")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-indigo-500">•</span>
-                  <span>Responsive design for mobile and desktop</span>
+                  <span>{t("project6Desc3")}</span>
                 </li>
               </ul>
             </div>
@@ -937,9 +921,9 @@ export default function CVPortfolio() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
-              <p className="text-lg font-semibold">Amirhossein Bayani</p>
+              <p className="text-lg font-semibold">{t("name")}</p>
               <p className="text-purple-200 text-sm">
-                Full Stack Software Developer
+                {t("footerTitle")}
               </p>
             </div>
             <div className="flex gap-6">
@@ -990,7 +974,7 @@ export default function CVPortfolio() {
           </div>
           <div className="mt-6 pt-6 border-t border-purple-700 text-center">
             <p className="text-purple-200 text-sm">
-              © 2025 Amirhossein Bayani. All rights reserved.
+              {t("footerCopyright")}
             </p>
           </div>
         </div>
