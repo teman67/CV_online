@@ -2,7 +2,7 @@ export const translations = {
   en: {
     // Header
     name: "Amirhossein Bayani",
-    title: "Full Stack Software Developer",
+    title: "AI Engineer | Applied Machine Learning & LLM Systems",
     location: "79111 Freiburg, BW, Germany",
     phone: "+49 1573 969 3972",
     email: "amirhossein.bayani@gmail.com",
@@ -10,7 +10,7 @@ export const translations = {
     
     // Summary Section
     summaryTitle: "Professional Summary",
-    summaryText: "Full-Stack Software Developer (3+ years) specializing in AI-enabled applications. Experienced with Python/Django/FastAPI, Next.js, PostgreSQL, Docker, and cloud deployment. Developed RAG systems, semantic-web tools, and NLP pipelines for real-world applications. Experienced in building APIs, end-to-end data workflows, and web platforms. Open to onsite, hybrid, or remote opportunities.",
+    summaryText: "AI Engineer specializing in production LLM systems, agentic RAG pipelines, and NLP applications. Built and deployed LangGraph-powered agents with adaptive retrieval, hallucination detection, and self-correcting workflows. Delivered AI platforms used by 50+ researchers, reducing manual processing time by 60%. Experienced across the full ML lifecycle — from vector store design and LLM orchestration to model fine-tuning on Hugging Face, FastAPI development, GDPR-aware data handling, and cloud deployment.",
     
     // Skills Section
     skillsTitle: "Technical Skills",
@@ -19,36 +19,37 @@ export const translations = {
     skillsToolsDevOps: "Tools & DevOps",
     skillsAIML: "AI/ML",
     skillsAIAssisted: "AI-assisted Development",
+    skillsAISystems: "AI Systems & APIs",
     skillsLanguages: "Languages",
     
     // Experience Section
     experienceTitle: "Experience",
     
     // Job 1
-    job1Title: "Semantic Web Developer",
+    job1Title: "Applied AI Developer",
     job1Company: "University of Freiburg, Freiburg, Germany",
-    job1Date: "2024/06 - Current",
-    job1Desc1: "Developed 3 LLM-powered web applications for automatic semantic metadata generation using Django, PostgreSQL, and Supabase, serving 50+ researchers",
-    job1Desc2: "Created and maintained ontologies in materials science, improving data interoperability across 3+ research projects",
-    job1Desc3: "Automated research data workflows using electronic lab notebooks (openBIS), reducing manual data entry by 60%",
+    job1Date: "2024/06 – 2025/12",
+    job1Desc1: "Designed and deployed LLM-powered applications for automatic semantic metadata generation used by 50+ researchers",
+    job1Desc2: "Built AI pipelines combining NLP, validation logic, and human-in-the-loop workflows for annotating texts, reduced processing time by approximately 60%",
+    job1Desc3: "Integrated AI services with backend systems and databases for production use",
     job1Desc4: "Collaborated with interdisciplinary teams to implement semantic web standards (RDF, OWL, SHACL) for knowledge graph construction",
     
     // Job 2
     job2Title: "Scientific Researcher",
     job2Company: "Fraunhofer IWM, Freiburg, Germany",
     job2Date: "2021/07 – 2023/07",
-    job2Desc1: "Conducted large-scale computational simulations on material systems",
-    job2Desc2: "Developed AI-driven materials modeling algorithms using TensorFlow and Scikit-Learn, improving prediction accuracy by 25%",
-    job2Desc3: "Led interdisciplinary collaboration with 15+ researchers across 3 European institutions",
+    job2Desc1: "Built Python scripts and automation tools for large-scale computational workflows",
+    job2Desc2: "Developed AI-supported data analysis pipelines using TensorFlow and Scikit-Learn",
+    job2Desc3: "Improved simulation workflow efficiency by 80% through algorithmic optimization",
     job2Desc4: "Published 2 peer-reviewed papers and supervised 3 junior researchers and master's students",
     
     // Job 3
     job3Title: "Postdoctoral Researcher",
     job3Company: "Uppsala University, Uppsala, Sweden",
     job3Date: "2018/10 – 2020/10",
-    job3Desc1: "Led 3 independent research projects integrating computational models with experimental validation",
-    job3Desc2: "Developed custom Python scripts for data analysis and visualization, processing multi-terabyte datasets",
-    job3Desc3: "Delivered 3 conference presentations and 3 publications in high-impact journals",
+    job3Desc1: "Designed and maintained Python tools for processing scientific datasets",
+    job3Desc2: "Automated data analysis, visualization, and reporting pipelines",
+    job3Desc3: "Supported collaborative research through reusable Python modules",
     job3Desc4: "Established international collaborations resulting in 2 joint research proposals",
     
     // Education Section
@@ -86,9 +87,9 @@ export const translations = {
     
     // Project 4
     project4Title: "ML Plant Disease Classification",
-    project4Desc1: "CNN model achieving 94% accuracy on plant disease detection",
-    project4Desc2: "Interactive web interface with real-time classification",
-    project4Desc3: "Model optimization reducing inference time by 40%",
+    project4Desc1: "CNN model achieving 95% accuracy on plant disease detection",
+    project4Desc2: "Optimized inference time and integrated into a full-stack web application with FastAPI and Next.js",
+    project4Desc3: "Leveraged an LLM to generate treatment recommendations and disease explanations for detected plant conditions",
     
     // Project 5
     project5Title: "LLM-Powered Annotation Application",
@@ -102,14 +103,25 @@ export const translations = {
     project6Desc2: "Email notifications and administrative dashboard",
     project6Desc3: "Responsive design for mobile and desktop",
     
+    // Project 7
+    project7Title: "EU AI Act Compliance Intelligence RAG Agent",
+    project7Desc1: "Adaptive RAG agent built with LangGraph and ChromaDB for querying the EU AI Act",
+    project7Desc2: "Implements corrective retrieval pipeline: document grading, hallucination detection, and web search fallback",
+    project7Desc3: "Exposed via FastAPI REST API with a Streamlit demo; deployed on Heroku Cloud",
+    
+    // Project 8
+    project8Title: "Fine-tuned MatSciBERT on Chemical Dataset",
+    project8Desc1: "Fine-tuned m3rg-iitd/matscibert on the CHEMDNER corpus (19,440 annotated biomedical examples) for chemical entity recognition",
+    project8Desc2: "Achieved F1 of 0.91 on chemical entity spans using Hugging Face Trainer API with BIO tagging and seqeval evaluation",
+    
     // Footer
-    footerTitle: "Full Stack Software Developer",
+    footerTitle: "AI Engineer",
     footerCopyright: "© 2025 Amirhossein Bayani. All rights reserved.",
   },
   de: {
     // Header
     name: "Amirhossein Bayani",
-    title: "Full Stack Software-Entwickler",
+    title: "KI-Ingenieur | Angewandtes Machine Learning & LLM-Systeme",
     location: "79111 Freiburg, BW, Deutschland",
     phone: "+49 1573 969 3972",
     email: "amirhossein.bayani@gmail.com",
@@ -117,7 +129,7 @@ export const translations = {
     
     // Summary Section
     summaryTitle: "Berufliches Profil",
-    summaryText: "Full-Stack Software-Entwickler (3+ Jahre) mit Spezialisierung auf KI-gestützte Anwendungen. Erfahrung mit Python/Django/FastAPI, Next.js, PostgreSQL, Docker und Cloud-Deployment. Entwicklung von RAG-Systemen, Semantic-Web-Tools und NLP-Pipelines für reale Anwendungen. Erfahrung im Aufbau von APIs, End-to-End-Daten-Workflows und Web-Plattformen. Offen für Präsenz-, Hybrid- oder Remote-Möglichkeiten.",
+    summaryText: "KI-Ingenieur mit Spezialisierung auf LLM-Produktionssysteme, agentische RAG-Pipelines und NLP-Anwendungen. Entwicklung und Deployment von LangGraph-gestützten Agenten mit adaptivem Retrieval, Halluzinationserkennung und selbstkorrigierenden Workflows. Bereitstellung von KI-Plattformen für über 50 Forscher, Reduzierung der manuellen Verarbeitungszeit um 60%. Erfahrung über den gesamten ML-Lebenszyklus — von Vektorspeicherdesign und LLM-Orchestrierung bis zur Modell-Feinabstimmung auf Hugging Face, FastAPI-Entwicklung, DSGVO-konformer Datenverwaltung und Cloud-Deployment.",
     
     // Skills Section
     skillsTitle: "Technische Fähigkeiten",
@@ -126,36 +138,37 @@ export const translations = {
     skillsToolsDevOps: "Tools & DevOps",
     skillsAIML: "KI/ML",
     skillsAIAssisted: "KI-gestützte Entwicklung",
+    skillsAISystems: "KI-Systeme & APIs",
     skillsLanguages: "Sprachen",
     
     // Experience Section
     experienceTitle: "Berufserfahrung",
     
     // Job 1
-    job1Title: "Semantic Web Entwickler",
+    job1Title: "Angewandter KI-Entwickler",
     job1Company: "Universität Freiburg, Freiburg, Deutschland",
-    job1Date: "2024/06 - Aktuell",
-    job1Desc1: "Entwicklung von 3 LLM-gestützten Webanwendungen zur automatischen Generierung semantischer Metadaten mit Django, PostgreSQL und Supabase für über 50 Forscher",
-    job1Desc2: "Erstellung und Pflege von Ontologien in der Materialwissenschaft, Verbesserung der Dateninteroperabilität über 3+ Forschungsprojekte",
-    job1Desc3: "Automatisierung von Forschungsdaten-Workflows mit elektronischen Labornotizbüchern (openBIS), Reduzierung manueller Dateneingabe um 60%",
+    job1Date: "2024/06 – 2025/12",
+    job1Desc1: "Entwicklung und Deployment von LLM-gestützten Anwendungen zur automatischen semantischen Metadatengenerierung für über 50 Forscher",
+    job1Desc2: "Aufbau von KI-Pipelines, die NLP, Validierungslogik und Human-in-the-Loop-Workflows zur Textannotation kombinieren; Verarbeitungszeit um ca. 60% reduziert",
+    job1Desc3: "Integration von KI-Diensten mit Backend-Systemen und Datenbanken für den Produktionseinsatz",
     job1Desc4: "Zusammenarbeit mit interdisziplinären Teams zur Implementierung von Semantic-Web-Standards (RDF, OWL, SHACL) für den Aufbau von Wissensgraphen",
     
     // Job 2
     job2Title: "Wissenschaftlicher Mitarbeiter",
     job2Company: "Fraunhofer IWM, Freiburg, Deutschland",
     job2Date: "2021/07 – 2023/07",
-    job2Desc1: "Durchführung großer rechnergestützter Simulationen an Materialsystemen",
-    job2Desc2: "Entwicklung KI-gesteuerter Materialmodellierungsalgorithmen mit TensorFlow und Scikit-Learn, Verbesserung der Vorhersagegenauigkeit um 25%",
-    job2Desc3: "Leitung interdisziplinärer Zusammenarbeit mit 15+ Forschern aus 3 europäischen Institutionen",
+    job2Desc1: "Entwicklung von Python-Skripten und Automatisierungswerkzeugen für umfangreiche Berechnungsworkflows",
+    job2Desc2: "Entwicklung KI-gestützter Datenanalysepipelines mit TensorFlow und Scikit-Learn",
+    job2Desc3: "Verbesserung der Simulationsworkflow-Effizienz um 80% durch algorithmische Optimierung",
     job2Desc4: "Veröffentlichung von 2 Fachartikeln und Betreuung von 3 Nachwuchsforschern und Masterstudenten",
     
     // Job 3
     job3Title: "Postdoktorand",
     job3Company: "Universität Uppsala, Uppsala, Schweden",
     job3Date: "2018/10 – 2020/10",
-    job3Desc1: "Leitung von 3 unabhängigen Forschungsprojekten zur Integration rechnergestützter Modelle mit experimenteller Validierung",
-    job3Desc2: "Entwicklung benutzerdefinierter Python-Skripte für Datenanalyse und Visualisierung, Verarbeitung von Multi-Terabyte-Datensätzen",
-    job3Desc3: "Durchführung von 3 Konferenzpräsentationen und 3 Publikationen in hochrangigen Fachzeitschriften",
+    job3Desc1: "Entwurf und Pflege von Python-Tools zur Verarbeitung wissenschaftlicher Datensätze",
+    job3Desc2: "Automatisierung von Datenanalyse-, Visualisierungs- und Berichtspipelines",
+    job3Desc3: "Unterstützung der kollaborativen Forschung durch wiederverwendbare Python-Module",
     job3Desc4: "Aufbau internationaler Kooperationen, die zu 2 gemeinsamen Forschungsanträgen führten",
     
     // Education Section
@@ -193,9 +206,9 @@ export const translations = {
     
     // Project 4
     project4Title: "ML-Pflanzenkrankheitsklassifizierung",
-    project4Desc1: "CNN-Modell mit 94% Genauigkeit bei der Erkennung von Pflanzenkrankheiten",
-    project4Desc2: "Interaktive Weboberfläche mit Echtzeitklassifizierung",
-    project4Desc3: "Modelloptimierung zur Reduzierung der Inferenzzeit um 40%",
+    project4Desc1: "CNN-Modell mit 95% Genauigkeit bei der Erkennung von Pflanzenkrankheiten",
+    project4Desc2: "Inferenzzeit optimiert und in eine Full-Stack-Webanwendung mit FastAPI und Next.js integriert",
+    project4Desc3: "LLM eingesetzt, um Behandlungsempfehlungen und Krankheitserklärungen für erkannte Pflanzenkrankheiten zu generieren",
     
     // Project 5
     project5Title: "LLM-gestützte Annotationsanwendung",
@@ -209,8 +222,19 @@ export const translations = {
     project6Desc2: "E-Mail-Benachrichtigungen und Verwaltungs-Dashboard",
     project6Desc3: "Responsive Design für Mobilgeräte und Desktop",
     
+    // Projekt 7
+    project7Title: "EU AI Act Compliance Intelligence RAG-Agent",
+    project7Desc1: "Adaptiver RAG-Agent mit LangGraph und ChromaDB zur Abfrage des EU AI Acts",
+    project7Desc2: "Implementiert eine korrigierende Retrieval-Pipeline: Dokumentenbewertung, Halluzinationserkennung und Web-Suche als Fallback",
+    project7Desc3: "Bereitgestellt über FastAPI REST API mit Streamlit-Demo; deployed auf Heroku Cloud",
+    
+    // Projekt 8
+    project8Title: "Feinabgestimmtes MatSciBERT auf chemischem Datensatz",
+    project8Desc1: "Feinabstimmung von m3rg-iitd/matscibert auf dem CHEMDNER-Korpus (19.440 annotierte biomedizinische Beispiele) zur chemischen Entitätserkennung",
+    project8Desc2: "F1-Score von 0,91 auf chemischen Entitätsspannen mit Hugging Face Trainer API, BIO-Tagging und seqeval-Evaluation erreicht",
+    
     // Footer
-    footerTitle: "Full Stack Software-Entwickler",
+    footerTitle: "KI-Ingenieur",
     footerCopyright: "© 2025 Amirhossein Bayani. Alle Rechte vorbehalten.",
   },
 };

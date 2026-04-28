@@ -201,6 +201,8 @@ export default function CVPortfolio() {
                       "React",
                       "HTML",
                       "CSS",
+                      "Bootstrap",
+                      "Tailwind CSS",
                     ].map((skill) => (
                       <span
                         key={skill}
@@ -217,7 +219,7 @@ export default function CVPortfolio() {
                     {t("skillsDatabases")}
                   </span>
                   <div className="flex flex-wrap gap-2">
-                    {["PostgreSQL", "MySQL", "Supabase"].map((skill) => (
+                    {["PostgreSQL", "MySQL", "Supabase", "ChromaDB"].map((skill) => (
                       <span
                         key={skill}
                         className="skill-tag px-3 py-1 bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 rounded-full text-sm font-medium shadow-sm border border-blue-200 dark:border-blue-700"
@@ -257,6 +259,7 @@ export default function CVPortfolio() {
                       "CNN",
                       "TensorFlow",
                       "Scikit-Learn",
+                      "NLP",
                       "LLM",
                       "RAG",
                       "NER",
@@ -265,6 +268,29 @@ export default function CVPortfolio() {
                       <span
                         key={skill}
                         className="skill-tag px-3 py-1 bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 rounded-full text-sm font-medium shadow-sm border border-emerald-200 dark:border-emerald-700"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-900/30 dark:to-purple-900/30 p-4 rounded-xl border border-violet-200 dark:border-violet-800">
+                  <span className="font-semibold text-violet-700 dark:text-violet-300 block mb-2">
+                    {t("skillsAISystems")}
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "LangGraph",
+                      "LangChain",
+                      "Hugging Face",
+                      "OpenAI",
+                      "Claude",
+                      "Ollama",
+                    ].map((skill) => (
+                      <span
+                        key={skill}
+                        className="skill-tag px-3 py-1 bg-white dark:bg-slate-700 text-gray-700 dark:text-gray-200 rounded-full text-sm font-medium shadow-sm border border-violet-200 dark:border-violet-700"
                       >
                         {skill}
                       </span>
@@ -555,6 +581,342 @@ export default function CVPortfolio() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* 1 — EU AI Act RAG Agent (LangGraph / RAG) */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-cyan-200 dark:border-cyan-900 hover:border-cyan-400 dark:hover:border-cyan-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project7Title")}
+                </h3>
+                <span className="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2026
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/EU-AI-Act-Compliance-Intelligence-Agent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://eu-ai-compliance-intelligence-a1039affa207.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  Live Demo →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["LangGraph", "ChromaDB", "FastAPI", "Streamlit", "Heroku"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">•</span>
+                  <span>{t("project7Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">•</span>
+                  <span>{t("project7Desc2")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-500">•</span>
+                  <span>{t("project7Desc3")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 2 — Fine-tuned MatSciBERT (NER / Fine-tuning) */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-teal-200 dark:border-teal-900 hover:border-teal-400 dark:hover:border-teal-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project8Title")}
+                </h3>
+                <span className="px-3 py-1 bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2025
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/Fine-tuning-Materials-Scientific-NER-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://huggingface.co/teman67/matscibert-chem-ner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  HuggingFace →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["MatSciBERT", "Hugging Face", "NER", "Fine-tuning", "Python"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-teal-500">•</span>
+                  <span>{t("project8Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-teal-500">•</span>
+                  <span>{t("project8Desc2")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3 — LLM-Powered Annotation Application */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-pink-200 dark:border-pink-900 hover:border-pink-400 dark:hover:border-pink-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project5Title")}
+                </h3>
+                <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2025
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/Annotation_NER_LLM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://annotation-llm-manual-nested-cafea0ef93fd.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  Live Demo →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {[
+                  "Streamlit",
+                  "Python",
+                  "OpenAI",
+                  "Claude AI",
+                  "NER",
+                  "LLM",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-pink-500">•</span>
+                  <span>{t("project5Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-pink-500">•</span>
+                  <span>{t("project5Desc2")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-pink-500">•</span>
+                  <span>{t("project5Desc3")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 4 — ML Plant Disease Classification (CNN / TensorFlow) */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-amber-200 dark:border-amber-900 hover:border-amber-400 dark:hover:border-amber-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project4Title")}
+                </h3>
+                <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2023
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/Plant-Disease-Classification-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://plant-disease-classification-ml-ops.vercel.app/summary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  Live Demo →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["TensorFlow", "CNN", "Streamlit", "Python", "MLOps"].map(
+                  (tech) => (
+                    <span
+                      key={tech}
+                      className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  )
+                )}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-amber-500">•</span>
+                  <span>{t("project4Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-500">•</span>
+                  <span>{t("project4Desc2")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-amber-500">•</span>
+                  <span>{t("project4Desc3")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 5 — Metadata Schema Generator with LLMs */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-200 dark:border-blue-900 hover:border-blue-400 dark:hover:border-blue-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project2Title")}
+                </h3>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2025
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/LLM_metadata_django_app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://llm-metadata-django-app-2f705a53f205.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  Live Demo →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {[
+                  "Django 4.2",
+                  "PostgreSQL",
+                  "Ollama AI",
+                  "Supabase",
+                  "Bootstrap",
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-blue-500">•</span>
+                  <span>{t("project2Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-500">•</span>
+                  <span>{t("project2Desc2")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-blue-500">•</span>
+                  <span>{t("project2Desc3")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 6 — RDF/SHACL Generator with AI Agents */}
+            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-emerald-200 dark:border-emerald-900 hover:border-emerald-400 dark:hover:border-emerald-600">
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
+                  {t("project3Title")}
+                </h3>
+                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold whitespace-nowrap">
+                  2024
+                </span>
+              </div>
+              <div className="flex gap-3 mb-3">
+                <a
+                  href="https://github.com/teman67/AgentSem"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  GitHub →
+                </a>
+                <a
+                  href="https://agent-rdf-shacl-creator-0f2d13e6fb10.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+                >
+                  Live Demo →
+                </a>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-3">
+                {["Python", "FastAPI", "RDFLib", "NetworkX"].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                <li className="flex gap-2">
+                  <span className="text-emerald-500">•</span>
+                  <span>{t("project3Desc1")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-500">•</span>
+                  <span>{t("project3Desc2")}</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-emerald-500">•</span>
+                  <span>{t("project3Desc3")}</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* 7 — NextJS + FastAPI RDF/SHACL Platform */}
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-purple-200 dark:border-purple-900 hover:border-purple-400 dark:hover:border-purple-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
@@ -602,9 +964,7 @@ export default function CVPortfolio() {
               <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
-                  <span>
-                    {t("project1Desc1")}
-                  </span>
+                  <span>{t("project1Desc1")}</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
@@ -612,252 +972,12 @@ export default function CVPortfolio() {
                 </li>
                 <li className="flex gap-2">
                   <span className="text-purple-500">•</span>
-                  <span>
-                    {t("project1Desc3")}
-                  </span>
+                  <span>{t("project1Desc3")}</span>
                 </li>
               </ul>
             </div>
 
-            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-blue-200 dark:border-blue-900 hover:border-blue-400 dark:hover:border-blue-600">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  {t("project2Title")}
-                </h3>
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-xs font-semibold whitespace-nowrap">
-                  2025
-                </span>
-              </div>
-              <div className="flex gap-3 mb-3">
-                <a
-                  href="https://github.com/teman67/LLM_metadata_django_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  GitHub →
-                </a>
-                <a
-                  href="https://llm-metadata-django-app.onrender.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  Live Demo →
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {[
-                  "Django 4.2",
-                  "PostgreSQL",
-                  "Ollama AI",
-                  "Supabase",
-                  "Bootstrap",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex gap-2">
-                  <span className="text-blue-500">•</span>
-                  <span>{t("project2Desc1")}</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-500">•</span>
-                  <span>
-                    {t("project2Desc2")}
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-blue-500">•</span>
-                  <span>
-                    {t("project2Desc3")}
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-emerald-200 dark:border-emerald-900 hover:border-emerald-400 dark:hover:border-emerald-600">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  {t("project3Title")}
-                </h3>
-                <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 rounded-full text-xs font-semibold whitespace-nowrap">
-                  2023
-                </span>
-              </div>
-              <div className="flex gap-3 mb-3">
-                <a
-                  href="https://github.com/teman67/AgentSem"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  GitHub →
-                </a>
-                <a
-                  href="https://agent-rdf-shacl-creator-0f2d13e6fb10.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  Live Demo →
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {["Python", "FastAPI", "RDFLib", "NetworkX"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex gap-2">
-                  <span className="text-emerald-500">•</span>
-                  <span>
-                    {t("project3Desc1")}
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500">•</span>
-                  <span>
-                    {t("project3Desc2")}
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500">•</span>
-                  <span>{t("project3Desc3")}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-amber-200 dark:border-amber-900 hover:border-amber-400 dark:hover:border-amber-600">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  {t("project4Title")}
-                </h3>
-                <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300 rounded-full text-xs font-semibold whitespace-nowrap">
-                  2025
-                </span>
-              </div>
-              <div className="flex gap-3 mb-3">
-                <a
-                  href="https://github.com/teman67/Plant-Disease-Classification-Project"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  GitHub →
-                </a>
-                <a
-                  href="https://plant-disease-classification-mlops.streamlit.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  Live Demo →
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {["TensorFlow", "CNN", "Streamlit", "Python", "MLOps"].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex gap-2">
-                  <span className="text-amber-500">•</span>
-                  <span>
-                    {t("project4Desc1")}
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-amber-500">•</span>
-                  <span>
-                    {t("project4Desc2")}
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-amber-500">•</span>
-                  <span>{t("project4Desc3")}</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-pink-200 dark:border-pink-900 hover:border-pink-400 dark:hover:border-pink-600">
-              <div className="flex items-start justify-between mb-3">
-                <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                  {t("project5Title")}
-                </h3>
-                <span className="px-3 py-1 bg-pink-100 dark:bg-pink-900/50 text-pink-700 dark:text-pink-300 rounded-full text-xs font-semibold whitespace-nowrap">
-                  2023
-                </span>
-              </div>
-              <div className="flex gap-3 mb-3">
-                <a
-                  href="https://github.com/teman67/Annotation_NER_LLM"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  GitHub →
-                </a>
-                <a
-                  href="https://annotation-by-llm.streamlit.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
-                >
-                  Live Demo →
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {[
-                  "Streamlit",
-                  "Python",
-                  "OpenAI",
-                  "Claude AI",
-                  "NER",
-                  "LLM",
-                ].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded text-xs font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                <li className="flex gap-2">
-                  <span className="text-pink-500">•</span>
-                  <span>{t("project5Desc1")}</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-pink-500">•</span>
-                  <span>{t("project5Desc2")}</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-pink-500">•</span>
-                  <span>{t("project5Desc3")}</span>
-                </li>
-              </ul>
-            </div>
-
+            {/* 8 — E-Learning Booking Platform */}
             <div className="section-card bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl shadow-xl p-6 border border-indigo-200 dark:border-indigo-900 hover:border-indigo-400 dark:hover:border-indigo-600">
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white">
@@ -877,7 +997,7 @@ export default function CVPortfolio() {
                   GitHub →
                 </a>
                 <a
-                  href="https://e-learning-booking-courses-project.onrender.com/"
+                  href="https://e-learning-platform-9ab8292ca70f.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
