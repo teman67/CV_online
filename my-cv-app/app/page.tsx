@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { useLanguage } from "./contexts/LanguageContext";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import ChatBox from "./components/ChatBox";
 
 export default function CVPortfolio() {
   const { t } = useLanguage();
@@ -1035,6 +1036,8 @@ export default function CVPortfolio() {
           </div>
         </section>
       </main>
+
+      <ChatBox />
 
       {/* Footer */}
       <footer className="relative z-10 bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-8 mt-12">
