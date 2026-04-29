@@ -2,7 +2,7 @@
 
 A modern, visually stunning portfolio website built with Next.js 16 and Tailwind CSS 4. This CV showcases a Full Stack Software Developer's experience, skills, projects, and education in an attractive, interactive format.
 
-### [Live Show](https://cv-online-one-gray.vercel.app/)
+### [Live Show](https://cv-online-indol.vercel.app/)
 
 ## ✨ Features
 
